@@ -44,9 +44,9 @@ labels = range(10)
 # create model
 model=Sequential() # one string of layers -- no divergence or anything
 #model.add(Flatten(input_shape=(img_width,img_height))) # (28,28)->(784) # only need to tell the input shape to the first layer in Keras
-model.add(Conv2D(filters=32, kernel_size=(3,3), strides=(1, 1), padding='valid', dilation_rate=(1, 1), activation='relu'))
+model.add(Conv2D(filters=6, kernel_size=(3,3), strides=(1, 1), padding='valid', dilation_rate=(1, 1), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None))
-model.add(Conv2D(filters=64, kernel_size=(3,3), strides=(1, 1), padding='valid', dilation_rate=(1, 1), activation='relu'))
+model.add(Conv2D(filters=12, kernel_size=(3,3), strides=(1, 1), padding='valid', dilation_rate=(1, 1), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None))
 model.add(Flatten()) # (28,28)->(784) # only need to tell the input shape to the first layer in Keras
 #model.add(Dense(num_classes, activation='sigmoid')) # Fully connected layer (784)->(10)
